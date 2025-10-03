@@ -1,16 +1,17 @@
-require('dotenv').config();
-const express = require('express');
-const session = require('express-session');
-const passport = require('./auth'); // <-- import configured passport
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import session from'express-session';
+import passport from './auth.js'; // <-- import configured passport
 
 const app = express();
 const port = 5000;
 
-const userRoutes = require("./routes/user");
+import userRoutes from "./routes/user.js";
 app.use("/api", userRoutes);
 
 
-const cors = require('cors');
+import cors from 'cors';
 const FRONTEND_URL = "http://localhost:3000"; // React default
 
 app.use(cors({
