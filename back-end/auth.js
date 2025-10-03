@@ -33,30 +33,3 @@ passport.deserializeUser((user, done) => {
 
 export default passport;
 
-// const passport = require('passport');
-// const GoogleStrategy = require('passport-google-oauth20').Strategy;
-
-// const GOOGLE_CLIENT_ID = '97568906881-umf575e3cm6kujt0f34956gmf8i8b71g.apps.googleusercontent.com';
-// const GOOGLE_CLIENT_SECRET = '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';
-
-// passport.use(new GoogleStrategy({
-//     clientID: GOOGLE_CLIENT_ID,
-//     clientSecret: GOOGLE_CLIENT_SECRET,
-//     callbackURL: "http://localhost:5000/google/callback",
-//     passReqToCallback: true
-//   },
-//   function(accessToken, refreshToken, profile, cb, done) {
-// //     User.findOrCreate({ googleId: profile.id }, function (err, user) {
-// //       return cb(err, user);
-// //     });
-// return done(null, profile);
-//   }
-// ));
-
-// passport.serializeUser((user, done) => {
-//     done(null, user);
-//     });
-
-// passport.deserializeUser((user, done) => {
-//     done(null, user);
-//     });
